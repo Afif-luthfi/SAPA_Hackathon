@@ -1,0 +1,12 @@
+[
+  { "id": "INT-01", "text": "Saya ingin mendaftar." },
+  { "id": "INT-02", "text": "Saya sudah memiliki janji." },
+  { "id": "INT-03", "text": "Saya membawa surat rujukan." },
+  { "id": "INT-04", "text": "Saya menggunakan BPJS." },
+  { "id": "INT-05", "text": "Di mana loket pendaftaran?" },
+  { "id": "INT-06", "text": "Di mana apotek?" },
+  { "id": "INT-07", "text": "Di mana laboratorium?" },
+  { "id": "INT-08", "text": "Saya membutuhkan penerjemah BISINDO." },
+  { "id": "INT-09", "text": "Saya belum mengerti. Tolong ulangi atau tuliskan." },
+  { "id": "INT-10", "text": "Terima kasih." }
+]

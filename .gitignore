@@ -1,0 +1,26 @@
+node_modules/
+dist/
+*.tsbuildinfo
+test-results/
+playwright-report/
+.env
+.env.*
+!.env.example
+*.log
+
+# Generated third-party vision assets; recreate with npm run setup:vision
+public/vision/vendor/
+public/vision/wasm/
+public/vision/models/
+# Real participant data must remain outside the repository
+datasets/raw/
+datasets/private/
+datasets/consents/
+
+
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+backend/.env
+

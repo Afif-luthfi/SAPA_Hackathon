@@ -1,0 +1,198 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SAPA future consented landmark sequence v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "signerId",
+    "consentReference",
+    "region",
+    "intentId",
+    "split",
+    "reviewStatus",
+    "source",
+    "frames"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "signerId": {
+      "type": "string",
+      "pattern": "^signer-[A-Za-z0-9_-]+$"
+    },
+    "consentReference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "region": {
+      "type": "string",
+      "minLength": 1
+    },
+    "intentId": {
+      "enum": [
+        "INT-01",
+        "INT-02",
+        "INT-03",
+        "INT-04",
+        "INT-05",
+        "INT-06",
+        "INT-07",
+        "INT-08",
+        "INT-09",
+        "INT-10"
+      ]
+    },
+    "split": {
+      "enum": [
+        "train",
+        "validation",
+        "test"
+      ]
+    },
+    "reviewStatus": {
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "extractor",
+        "version",
+        "coordinateSpace",
+        "mirrored"
+      ],
+      "properties": {
+        "extractor": {
+          "const": "MediaPipe Holistic"
+        },
+        "version": {
+          "const": "1.0.1"
+        },
+        "coordinateSpace": {
+          "const": "normalized-image"
+        },
+        "mirrored": {
+          "const": false
+        }
+      }
+    },
+    "frames": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 600,
+      "items": {
+        "$ref": "#/$defs/frame"
+      }
+    }
+  },
+  "$defs": {
+    "point": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        },
+        "visibility": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "frame": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "timestampMs",
+        "pose",
+        "leftHand",
+        "rightHand",
+        "face"
+      ],
+      "properties": {
+        "timestampMs": {
+          "type": "number",
+          "minimum": 0
+        },
+        "pose": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/point"
+          },
+          "anyOf": [
+            {
+              "maxItems": 0
+            },
+            {
+              "minItems": 33,
+              "maxItems": 33
+            }
+          ]
+        },
+        "leftHand": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/point"
+          },
+          "anyOf": [
+            {
+              "maxItems": 0
+            },
+            {
+              "minItems": 21,
+              "maxItems": 21
+            }
+          ]
+        },
+        "rightHand": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/point"
+          },
+          "anyOf": [
+            {
+              "maxItems": 0
+            },
+            {
+              "minItems": 21,
+              "maxItems": 21
+            }
+          ]
+        },
+        "face": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/point"
+          },
+          "anyOf": [
+            {
+              "maxItems": 0
+            },
+            {
+              "minItems": 478,
+              "maxItems": 478
+            }
+          ]
+        }
+      }
+    }
+  }
+}

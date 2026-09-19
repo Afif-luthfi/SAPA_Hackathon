@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "status": "not-ready",
+  "region": null,
+  "reviewer": null,
+  "extractor": {
+    "name": "MediaPipe Holistic",
+    "version": "1.0.1",
+    "coordinates": "normalized-image",
+    "mirrored": false
+  },
+  "contributors": [],
+  "reviews": [],
+  "sequences": [],
+  "blockers": [
+    "Reviewer/penutur BISINDO belum tersedia.",
+    "Varian daerah belum ditentukan.",
+    "Dataset berizin dan evaluasi terpisah per penutur belum tersedia."
+  ]
+}

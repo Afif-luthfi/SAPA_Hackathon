@@ -1,0 +1,22 @@
+{
+  "modelId": "sapa-demo-handcraft-v1",
+  "version": "0.1.0-demo",
+  "kind": "rule-based-demo",
+  "region": "unassigned",
+  "validated": false,
+  "reviewer": null,
+  "trainedAt": null,
+  "note": "Contoh teknis untuk menguji alur aplikasi. Bukan model BISINDO, belum ditinjau penutur BISINDO, dan hanya berjalan di perangkat.",
+  "classes": [
+    { "intentId": "INT-01", "prototype": { "handsMean": 2, "energy": 0.13, "height": 0.35, "spread": 0.5, "endLift": 0.13, "symmetry": 0 } },
+    { "intentId": "INT-02", "prototype": { "handsMean": 1, "energy": 0.22, "height": 0.15, "spread": 0.4, "endLift": -0.08, "symmetry": 0 } },
+    { "intentId": "INT-03", "prototype": { "handsMean": 2, "energy": 0.3, "height": -0.1, "spread": 0.5, "endLift": 0.05, "symmetry": 0.1 } },
+    { "intentId": "INT-04", "prototype": { "handsMean": 1, "energy": 0.28, "height": 0.5, "spread": 0.3, "endLift": 0.12, "symmetry": 0 } },
+    { "intentId": "INT-05", "prototype": { "handsMean": 1, "energy": 0.38, "height": 0, "spread": 0.65, "endLift": 0.2, "symmetry": 0 } },
+    { "intentId": "INT-06", "prototype": { "handsMean": 1, "energy": 0.32, "height": -0.25, "spread": 0.45, "endLift": -0.05, "symmetry": 0 } },
+    { "intentId": "INT-07", "prototype": { "handsMean": 2, "energy": 0.55, "height": 0.1, "spread": 0.75, "endLift": -0.3, "symmetry": 0.2 } },
+    { "intentId": "INT-08", "prototype": { "handsMean": 2, "energy": 0.06, "height": 0.8, "spread": 0.9, "endLift": 0.35, "symmetry": 0 } },
+    { "intentId": "INT-09", "prototype": { "handsMean": 1, "energy": 0.22, "height": -0.35, "spread": 0.35, "endLift": 0, "symmetry": 0 } },
+    { "intentId": "INT-10", "prototype": { "handsMean": 2, "energy": 0.1, "height": -0.05, "spread": 0.38, "endLift": -0.12, "symmetry": 0.05 } }
+  ]
+}

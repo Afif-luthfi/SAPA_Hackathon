@@ -1,0 +1,40 @@
+{
+  "name": "WL-BISINDO",
+  "version": 1,
+  "region": "Banten",
+  "authors": [
+    "Grace Oktaviani Kindy",
+    "Glenn Leonali",
+    "Henry Lucky"
+  ],
+  "paper": "https://doi.org/10.1016/j.procs.2025.08.277",
+  "repository": "https://github.com/AceKinnn/WL-BISINDO",
+  "dataset": "https://www.kaggle.com/datasets/glennleonali/wl-bisindo",
+  "license": "CC BY-NC 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "use": "Local noncommercial research prototype. Commercial use and public demo rights must be assessed before release.",
+  "reviewer": null,
+  "communityValidated": false,
+  "selectedLabels": {
+    "6": "Maaf",
+    "10": "Terima kasih",
+    "15": "Di mana"
+  },
+  "rejectionProbe": {
+    "7": "Makan"
+  },
+  "split": {
+    "train": [
+      0,
+      1,
+      2
+    ],
+    "validation": [
+      3
+    ],
+    "test": [
+      4
+    ]
+  },
+  "splitNote": "SAPA custom signer-disjoint split, not the paper evaluation protocol. Target count: 90 train, 30 validation, 30 test; rejection probe kept outside target classes."
+}

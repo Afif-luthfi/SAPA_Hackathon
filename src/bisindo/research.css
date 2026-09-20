@@ -1,0 +1,29 @@
+.research-page { max-width: 1160px; margin: auto; padding: 32px 24px; color: #203f2d; }
+.research-page header { margin: 32px 0 20px; }
+.research-page h1 { font-size: clamp(30px,5vw,48px); margin: 18px 0 10px; }
+.research-page p { font-size: 15px; line-height: 1.7; margin: 12px 0; }
+.research-notice { display:flex; gap:14px; padding:18px; background:#edf3e8; border-radius:14px; }
+.research-notice svg {flex-shrink:0;margin-top:10px;}
+.research-metrics {display:flex; flex-wrap:wrap; gap:24px; padding:24px 0;}
+.research-metrics div {flex:1; min-width:150px;}
+.research-metrics strong {display:block;font-size:30px;}
+.research-metrics span {font-size:13px;}
+.research-metrics p {width:100%;font-size:13px;margin:0;}
+.research-grid {display:grid;grid-template-columns:1.2fr 1fr;gap:22px;}
+.research-card {border:1px solid #cddac9;border-radius:18px;padding:24px;background:#fff;min-width:0;}
+.research-card h2 {display:flex;align-items:center;gap:10px;font-size:22px;}
+.research-camera {position:relative;aspect-ratio:4/3;background:#182b20;border-radius:12px;overflow:hidden;}
+.research-camera video,.research-camera canvas {position:absolute;width:100%;height:100%;object-fit:contain;transform:scaleX(-1);}
+.research-actions {display:flex;gap:10px;flex-wrap:wrap;margin:16px 0;}
+.research-page details {border-top:1px solid #d4dfce;margin-top:24px;padding-top:20px;}
+.research-page summary {cursor:pointer;font-weight:600;}
+.research-page input {width:100%;margin:12px 0;}
+.research-clip {width:100%;max-height:280px;margin:12px 0;}
+.research-status {padding:14px;background:#f3f6ef;border-radius:10px;}
+.research-source {font-size:12px!important;overflow-wrap:anywhere;}
+.research-card h3 {font-size:30px;}
+.research-card small {display:block;margin:14px 0;}
+.research-confirmed {border:2px solid #3d694b;border-radius:12px;padding:18px;margin:22px 0;}
+.research-confirmed p {font-size:28px;font-weight:600;}
+.research-page footer {font-size:12px;line-height:1.8;margin-top:28px;}
+@media(max-width:760px){.research-grid{grid-template-columns:1fr;}.research-page{padding:22px 16px;}.research-card{padding:18px;}}

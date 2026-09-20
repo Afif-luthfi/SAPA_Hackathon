@@ -68,7 +68,12 @@ export async function mockCamera(page: Page, permission = 'granted', workerMode 
       }
       terminate() { this.dead = true; probe.terminated++; }
     }
-    Reflect.set(window, 'Worker', TestWorker);
+    const NativeWorker = window.Worker;
+    Reflect.set(window, 'Worker', new Proxy(NativeWorker, {
+      construct(target, args) {
+        return String(args[0]).includes('landmark-worker.js') ? new TestWorker() : Reflect.construct(target, args);
+      },
+    }));
   }, { permission, workerMode, pattern });
 }
 

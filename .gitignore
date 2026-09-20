@@ -24,3 +24,6 @@ __pycache__/
 *.pyc
 backend/.env
 
+
+# Generated research model contains derived training features; rebuild locally.
+public/research/

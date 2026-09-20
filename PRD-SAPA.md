@@ -941,3 +941,8 @@ Jika reviewer BISINDO tidak tersedia, tim tidak boleh mengklaim gesture sebagai 
 - UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi: https://peraturan.bpk.go.id/details/229798/uu-no-27-
 - WL-BISINDO dataset and baseline: https://github.com/AceKinnn/WL-BISINDO
 
+
+
+## Catatan eksperimen dataset publik — 20 September 2026
+
+Tim menyatakan belum memiliki penutur BISINDO dan menyetujui pendekatan dataset publik dengan cakupan kecil. Eksperimen di `/#bisindo` memakai WL-BISINDO Banten untuk Maaf, Terima kasih, dan Di mana. Eksperimen ini tidak menggantikan kriteria penerimaan MVP sepuluh intent rumah sakit atau validasi komunitas. Cakupan dan evaluasi dijelaskan pada [panduan riset](docs/RISET-BISINDO.md). Demonstrasi internal dari video uji dipisahkan dari kamera langsung; kesiapan demo publik harus dijelaskan sesuai bukti dan penggunaan lisensi.

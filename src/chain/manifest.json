@@ -1,0 +1,28 @@
+{
+  "packId": "sapa-demo-v1",
+  "version": "0.1.0-demo",
+  "regionId": 0,
+  "variant": "unassigned",
+  "network": {
+    "destination": "BOT Chain testnet",
+    "chainId": 968,
+    "deployed": false,
+    "contractAddress": null,
+    "note": "Registry yang dipakai di aplikasi adalah simulasi lokal untuk menguji alur. Alamat dan blok deployment akan dirilis hanya setelah kontrak benar-benar di-deploy."
+  },
+  "model": {
+    "id": "sapa-demo-handcraft-v1",
+    "file": "model.json",
+    "sha256": "9b030480a0537ebacbaefab692702a7aff3961b1a226e686f08c1705009345a9"
+  },
+  "intentSchema": {
+    "file": "intents.json",
+    "sha256": "0fea37a8f73066428c365464887d09c9ec2ede546b0541c0f82217305e04f5e2"
+  },
+  "dataset": {
+    "state": "none",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "note": "Tidak ada dataset yang dikumpulkan/ditinjau; hash di atas menandai keadaan kosong, bukan bukti dataset tersedia."
+  },
+  "metadataUri": "manifest.json"
+}

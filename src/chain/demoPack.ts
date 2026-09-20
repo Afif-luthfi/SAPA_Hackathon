@@ -1,4 +1,4 @@
-import manifest from '../../public/language-pack/manifest.json';
+import manifest from './manifest.json';
 import { approvePack, createRegistry, submitPack, type RegistryState } from './registry';
 
 export const LANGUAGE_PACK = manifest;

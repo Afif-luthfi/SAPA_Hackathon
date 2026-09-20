@@ -2,7 +2,7 @@
 
 Dokumen ini menerjemahkan [PRD SAPA](../PRD-SAPA.md) menjadi pekerjaan bertahap. Setiap tahap menghasilkan sesuatu yang bisa dilihat dan dicoba sebelum pengembangan berikutnya dimulai.
 
-**Tahap 1 selesai; bagian teknis kamera tahap 2 siap ditinjau; alur demo tahap 3 tersedia sebagai contoh teknis; tahap 4 tersedia sebagai simulasi registry (kontrak belum di-deploy).** Validasi bahasa dan dataset tahap 2 masih menunggu reviewer/varian daerah. Model pengenal tahap 3 adalah contoh berbasis aturan; bukan model BISINDO yang dilatih atau ditinjau. Tahap 5 belum dilaksanakan.
+**Tahap 1 selesai; bagian teknis kamera tahap 2 siap ditinjau; alur demo tahap 3 tersedia sebagai contoh teknis; tahap 4 tersedia sebagai simulasi registry (kontrak belum di-deploy).** Validasi bahasa dan dataset tahap 2 masih menunggu reviewer/varian daerah. Model pengenal tahap 3 adalah contoh berbasis aturan; bukan model BISINDO yang dilatih atau ditinjau. Tahap 5 dimulai: verifikasi integrasi dan panduan demo lokal; deployment dan validasi lapangan masih menunggu.
 
 ## Ringkasan tahapan
 
@@ -10,9 +10,9 @@ Dokumen ini menerjemahkan [PRD SAPA](../PRD-SAPA.md) menjadi pekerjaan bertahap.
 |---|---|---|
 | 1 | Aplikasi komunikasi manual yang dapat dicoba dalam satu layar | Selesai; siap ditinjau |
 | 2 | Pratinjau kamera, ekstraksi landmark, dan persiapan dataset yang ditinjau penutur BISINDO | Kamera selesai; reviewer dan dataset menunggu |
-| 3 | Pengenalan intent terbatas, konfirmasi hasil, fallback, dan caption petugas | Alur demo selesai; model BISINDO dan caption menunggu |
+| 3 | Pengenalan intent terbatas, konfirmasi hasil, fallback, dan caption petugas | Alur demo dan draf suara tersedia; model BISINDO menunggu |
 | 4 | Persetujuan dan pemeriksaan integritas language pack melalui BOT Chain | Alur simulasi selesai; deployment kontrak menunggu |
-| 5 | Pengujian menyeluruh, deployment, dan materi demo | Rencana |
+| 5 | Pengujian menyeluruh, deployment, dan materi demo | Verifikasi lokal dan naskah demo tersedia; deployment menunggu |
 
 ## Tahap 1 — fondasi dan komunikasi manual
 
@@ -81,7 +81,7 @@ Tahap ini menyediakan jalur komunikasi yang tetap dapat dipakai ketika fitur AI 
 - Persiapan aset versi tetap dengan checksum, panduan reviewer, manifest kosong, dan skema calon dataset.
 - 22 tes logika dan 17 skenario browser lulus. Runtime asli diuji dengan frame/video buatan; kamera fisik dan signer nyata belum dievaluasi.
 
-**Bagian yang masih menunggu:** tim mengonfirmasi belum ada reviewer maupun varian daerah. Tidak ada dataset nyata, consent kontributor, atau review gesture yang dapat diklaim selesai. Alat koleksi dataset terpisah juga belum dibangun. Karena itu tahap 2 tidak dinyatakan selesai secara keseluruhan.
+**Bagian yang masih menunggu:** tim mengonfirmasi belum ada reviewer maupun varian daerah. Tidak ada dataset nyata, consent kontributor, atau review gesture yang dapat diklaim selesai. Studio Dataset terpisah kini tersedia untuk pengambilan sampel berizin dan ekspor JSON pending review. Karena itu tahap 2 tidak dinyatakan selesai secara keseluruhan.
 
 Panduan praktis ada di [Persiapan dataset](PERSIAPAN-DATASET.md), rincian teknis di [Aset vision](ASET-VISION.md). Pengembangan berhenti pada batas tahap ini untuk diuji tim.
 
@@ -144,7 +144,7 @@ Karena reviewer dan dataset belum tersedia, tahap 3 menyediakan **contoh teknis 
 - Alur tahan → rekam → hasil → konfirmasi pengguna → tampil di percakapan; pesan pasien dibacakan dan dapat diulang.
 - Isyarat pendek, buram, tidak meyakinkan, atau gagal tidak pernah diterjemahkan secara paksa; selalu ada frasa, ketik, atau penerjemah sebagai fallback.
 - Kartu hasil menampilkan identitas model dan catatan asal-usul: `Contoh teknis untuk menguji alur. Belum ditinjau penutur BISINDO.`
-- Model `sapa-demo-handcraft-v1` berjalan seluruhnya di browser; endpoint FastAPI tetap `503 MODEL_NOT_AVAILABLE` dan tidak menerima unggahan, sehingga klaim "deployed model" tidak dipertahankan.
+- Model `sapa-demo-handcraft-v1` berjalan seluruhnya di browser; endpoint FastAPI tetap `503 MODEL_NOT_AVAILABLE` memvalidasi input tanpa menyimpan data atau menghasilkan prediksi, sehingga klaim "deployed model" tidak dipertahankan.
 
 ### Verifikasi tahap 3 — 19 September 2026
 
@@ -152,7 +152,7 @@ Karena reviewer dan dataset belum tersedia, tahap 3 menyediakan **contoh teknis 
 - Vitest: 46 pengujian logika lulus (fitur, aturan keyakinan, model contoh, sesi).
 - Playwright/Edge: 26 skenario browser lulus, termasuk 3 skenario isyarat → konfirmasi → kirim dan jalur "belum dikenali".
 - Prediksi tidak pernah masuk percakapan tanpa konfirmasi; pengujian menegaskan pesan tetap 0 sebelum tombol **Benar** ditekan.
-- Belum ada evaluasi akurasi dengan penutur BISINDO, ambang yang divalidasi, maupun caption suara petugas. Uji otomatis tidak menggantikan validasi bersama komunitas Tuli.
+- Belum ada evaluasi akurasi dengan penutur BISINDO, ambang yang divalidasi, dan saat verifikasi tahap 3 ini caption suara petugas belum tersedia (draf suara ditambahkan pada 20 September 2026). Uji otomatis tidak menggantikan validasi bersama komunitas Tuli.
 
 ## Tahap 4 — language pack di BOT Chain
 
@@ -221,6 +221,23 @@ Karena tidak ada jaringan BOT Chain yang dipakai, tahap 4 menyediakan **simulasi
 - Tim memahami fitur yang sudah tersedia, masih eksperimental, dan belum dibangun.
 - Klaim model didukung hasil evaluasi; simulasi dan rekaman tidak dipresentasikan sebagai layanan langsung.
 
+### Verifikasi integrasi lokal — 20 September 2026
+
+- 66 tes logika, 16 tes backend, dan 29 skenario browser lulus; build produksi dan checksum 8 aset vision berhasil.
+- Studio Dataset sudah mendukung persetujuan, pengambilan terbatas, pembatalan, ekspor JSON pending review, dan audit offline.
+- Impor manifest dipindahkan ke `src/chain/manifest.json` agar tidak mengimpor direktori public melalui JavaScript. Tes membandingkan seluruh manifest aplikasi dengan salinan publik; saat metadata berubah, perbarui keduanya.
+- Panduan [demo tiga menit](DEMO-3-MENIT.md), [backend lokal](../backend/README.md), dan [Studio Dataset](../datasets/README.md) tersedia.
+- Uji otomatis memakai input buatan. Kamera fisik, evaluasi bahasa, deployment HTTPS, kontrak testnet, serta rekaman cadangan belum diselesaikan.
+
+### Draf suara petugas — 20 September 2026
+
+- Input SpeechRecognition berbahasa Indonesia, hanya dimulai setelah persetujuan dan tombol Mulai ucapan; penyedia browser dapat memproses audio di server.
+- Hasil suara tidak langsung masuk percakapan atau mengganti ketikan. Petugas menambahkan hasil final ke draf, mengedit, lalu mengirim.
+- Kegagalan izin/perangkat/jaringan mempertahankan jalur ketik. Pembatalan, timeout, tab tersembunyi, pergantian mode/dialog, keluar Studio, dan akhir sesi menghentikan pengenalan; callback lama diabaikan.
+- Batas percobaan 30 detik; penyelesaian layanan dibatasi 5 detik. Tidak ada perekaman audio ke berkas oleh SAPA.
+- 8 skenario suara baru lulus; suite integrasi mencakup 37 skenario browser. Build dan 66 tes logika lulus. Screenshot 360 px dengan teks besar/kontras tinggi diperiksa.
+- Uji mikrofon fisik, dukungan layanan browser, dan akurasi bahasa Indonesia tetap perlu dilakukan pada perangkat demo. Tes tiruan hanya memverifikasi alur aplikasi.
+
 ## Pembagian fokus tim
 
 | Anggota | Tahap 1 | Tahap lanjutan |
@@ -234,3 +251,8 @@ Pembagian ini dapat disesuaikan dengan kemampuan tim. Integrasi dilakukan pada s
 ## Cara mencatat progres
 
 Pada akhir setiap tahap, catat hasil nyata: fitur yang dapat dicoba, perintah pengujian dan hasilnya, kendala yang masih ada, serta cakupan tahap berikutnya. Ubah status menjadi selesai hanya setelah kriteria tahap diperiksa. PRD tetap menjadi acuan sasaran MVP penuh; penyesuaian produk yang disepakati dicatat secara terpisah sebelum mengubah persyaratannya.
+
+
+## Eksperimen dataset publik — 20 September 2026
+
+Jalur riset baru `/#bisindo` menggunakan contoh nyata WL-BISINDO untuk tiga kata. Kiosk sepuluh intent tetap menggunakan contoh teknis sebelumnya. Tidak ada reviewer SAPA yang diklaim tersedia. Proses meliputi inventaris sumber, unduhan 200 video dengan hash, konversi H.264, ekstraksi lokal, model temporal DTW, validasi signer3, dan pengujian signer4. Angka final dicatat pada `datasets/wl-bisindo/evaluation.json`; lihat [panduan riset](RISET-BISINDO.md).

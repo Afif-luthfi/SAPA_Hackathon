@@ -1,0 +1,27 @@
+{
+  "at": "2026-09-19T23:31:54.394Z",
+  "rows": [
+    {
+      "file": "signer4_label6_sample1.mp4",
+      "sourceLabel": 6,
+      "result": "Sumber: Video lokal: signer4_label6_sample1.mp4\n\nMaaf\n\nKandidat dari tiga kata yang tersedia. Isyarat di luar daftar dapat salah dikenali. Periksa artinya sebelum mengonfirmasi.\n\nWaktu klasifikasi: 7 ms. Jarak model bukan persentase keyakinan.\nBenar, tampilkan kata"
+    },
+    {
+      "file": "signer4_label10_sample1.mp4",
+      "sourceLabel": 10,
+      "result": "Sumber: Video lokal: signer4_label10_sample1.mp4\n\nTerima kasih\n\nKandidat dari tiga kata yang tersedia. Isyarat di luar daftar dapat salah dikenali. Periksa artinya sebelum mengonfirmasi.\n\nWaktu klasifikasi: 7 ms. Jarak model bukan persentase keyakinan.\nBenar, tampilkan kata"
+    },
+    {
+      "file": "signer4_label15_sample1.mp4",
+      "sourceLabel": 15,
+      "result": "Sumber: Video lokal: signer4_label15_sample1.mp4\n\nBelum dikenali\n\nDi luar cakupan atau terlalu ragu. Gunakan komunikasi manual pada SAPA.\n\nWaktu klasifikasi: 1 ms. Jarak model bukan persentase keyakinan."
+    },
+    {
+      "file": "signer4_label7_sample1.mp4",
+      "sourceLabel": 7,
+      "result": "Sumber: Video lokal: signer4_label7_sample1.mp4\n\nMaaf\n\nKandidat dari tiga kata yang tersedia. Isyarat di luar daftar dapat salah dikenali. Periksa artinya sebelum mengonfirmasi.\n\nWaktu klasifikasi: 8 ms. Jarak model bukan persentase keyakinan.\nBenar, tampilkan kata"
+    }
+  ],
+  "errors": [],
+  "note": "Four fixed held-out source videos; real local extraction and inference; not physical camera."
+}

@@ -55,9 +55,9 @@ describe('pack publik vs kode aplikasi (drift guard)', () => {
   });
 });
 
-describe('demoPack alkitab dengan manifest', () => {
+describe('demoPack konsisten dengan manifest', () => {
   it('LANGUAGE_PACK mengikuti manifest publik', () => {
-    expect(LANGUAGE_PACK.packId).toBe(manifest.packId);
+    expect(LANGUAGE_PACK).toEqual(manifest);
     expect(LANGUAGE_PACK.model.sha256).toBe(manifest.model.sha256);
     expect(LANGUAGE_PACK.intentSchema.sha256).toBe(manifest.intentSchema.sha256);
     expect(LANGUAGE_PACK.dataset.sha256).toBe(manifest.dataset.sha256);

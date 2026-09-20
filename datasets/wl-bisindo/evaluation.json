@@ -1,0 +1,351 @@
+{
+  "generatedAt": "2026-09-19T23:31:37.882Z",
+  "modelId": "sapa-wl-bisindo-dtw-v1",
+  "trainingCount": 79,
+  "downloadedCount": 200,
+  "qualityCounts": {
+    "train": 98,
+    "validation": 40,
+    "test": 24
+  },
+  "rejectedForQuality": [
+    "signer0_label7_sample1.mp4",
+    "signer0_label7_sample10.mp4",
+    "signer0_label7_sample2.mp4",
+    "signer0_label7_sample3.mp4",
+    "signer0_label7_sample4.mp4",
+    "signer0_label7_sample5.mp4",
+    "signer0_label7_sample6.mp4",
+    "signer0_label7_sample7.mp4",
+    "signer0_label7_sample9.mp4",
+    "signer1_label15_sample10.mp4",
+    "signer1_label15_sample12.mp4",
+    "signer1_label15_sample5.mp4",
+    "signer1_label15_sample8.mp4",
+    "signer1_label15_sample9.mp4",
+    "signer1_label6_sample9.mp4",
+    "signer2_label15_sample3.mp4",
+    "signer2_label15_sample4.mp4",
+    "signer2_label15_sample6.mp4",
+    "signer2_label15_sample7.mp4",
+    "signer2_label15_sample8.mp4",
+    "signer2_label7_sample2.mp4",
+    "signer2_label7_sample5.mp4",
+    "signer4_label10_sample4.mp4",
+    "signer4_label15_sample1.mp4",
+    "signer4_label15_sample10.mp4",
+    "signer4_label15_sample2.mp4",
+    "signer4_label15_sample3.mp4",
+    "signer4_label15_sample5.mp4",
+    "signer4_label15_sample6.mp4",
+    "signer4_label15_sample7.mp4",
+    "signer4_label15_sample9.mp4",
+    "signer4_label6_sample10.mp4",
+    "signer4_label7_sample10.mp4",
+    "signer4_label7_sample4.mp4",
+    "signer4_label7_sample5.mp4",
+    "signer4_label7_sample6.mp4",
+    "signer4_label7_sample7.mp4",
+    "signer4_label7_sample9.mp4"
+  ],
+  "threshold": {
+    "maxDistance": 0.1806098903970492,
+    "minMargin": 0
+  },
+  "thresholdSelection": "Only signer 3: accepted accuracy >=90%, rejection of Makan >=80%; maximize correct accepts minus 3x errors. No test tuning.",
+  "validation": {
+    "inputKnownCount": 30,
+    "inputUnknownCount": 10,
+    "qualityRejectedKnown": 0,
+    "qualityRejectedUnknown": 0,
+    "endToEndCorrectRate": 0.23333333333333334,
+    "knownCount": 30,
+    "closedSetAccuracy": 0.9333333333333333,
+    "macroF1": 0.9326599326599326,
+    "accepted": 7,
+    "acceptedCorrect": 7,
+    "acceptedAccuracy": 1,
+    "coverage": 0.23333333333333334,
+    "unknownCount": 10,
+    "unknownRejected": 10,
+    "confusion": {
+      "6": {
+        "6": 10,
+        "10": 0,
+        "15": 0
+      },
+      "10": {
+        "6": 0,
+        "10": 10,
+        "15": 0
+      },
+      "15": {
+        "6": 0,
+        "10": 2,
+        "15": 8
+      }
+    },
+    "perClass": [
+      {
+        "label": 6,
+        "f1": 1
+      },
+      {
+        "label": 10,
+        "f1": 0.9090909090909091
+      },
+      {
+        "label": 15,
+        "f1": 0.8888888888888888
+      }
+    ]
+  },
+  "test": {
+    "inputKnownCount": 30,
+    "inputUnknownCount": 10,
+    "qualityRejectedKnown": 10,
+    "qualityRejectedUnknown": 6,
+    "endToEndCorrectRate": 0.6666666666666666,
+    "knownCount": 20,
+    "closedSetAccuracy": 1,
+    "macroF1": 1,
+    "accepted": 20,
+    "acceptedCorrect": 20,
+    "acceptedAccuracy": 1,
+    "coverage": 1,
+    "unknownCount": 4,
+    "unknownRejected": 0,
+    "confusion": {
+      "6": {
+        "6": 9,
+        "10": 0,
+        "15": 0
+      },
+      "10": {
+        "6": 0,
+        "10": 9,
+        "15": 0
+      },
+      "15": {
+        "6": 0,
+        "10": 0,
+        "15": 2
+      }
+    },
+    "perClass": [
+      {
+        "label": 6,
+        "f1": 1
+      },
+      {
+        "label": 10,
+        "f1": 1
+      },
+      {
+        "label": 15,
+        "f1": 1
+      }
+    ]
+  },
+  "limits": [
+    "Only 3 isolated signs; no clinical intents or sentence translation.",
+    "Single held-out test signer; not community validation.",
+    "Unknown rejection FAILED on held-out Makan videos; use only as a constrained-vocabulary research experiment, not open-world recognition.",
+    "Physical webcam and novice demonstration not evaluated."
+  ],
+  "testPredictions": [
+    {
+      "file": "signer4_label10_sample1.mp4",
+      "label": 10,
+      "prediction": 10,
+      "distance": 0.046177082288135794,
+      "margin": 0.5712245667093719,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label10_sample10.mp4",
+      "label": 10,
+      "prediction": 10,
+      "distance": 0.03361117080294199,
+      "margin": 0.6453800320726545,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label10_sample2.mp4",
+      "label": 10,
+      "prediction": 10,
+      "distance": 0.0379733190318233,
+      "margin": 0.6359958896761598,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label10_sample3.mp4",
+      "label": 10,
+      "prediction": 10,
+      "distance": 0.0355027865838294,
+      "margin": 0.7190534859899076,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label10_sample5.mp4",
+      "label": 10,
+      "prediction": 10,
+      "distance": 0.040085485100174394,
+      "margin": 0.6069614199301182,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label10_sample6.mp4",
+      "label": 10,
+      "prediction": 10,
+      "distance": 0.04578975817156398,
+      "margin": 0.48418233852738096,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label10_sample7.mp4",
+      "label": 10,
+      "prediction": 10,
+      "distance": 0.0330955595988718,
+      "margin": 0.7536202365603001,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label10_sample8.mp4",
+      "label": 10,
+      "prediction": 10,
+      "distance": 0.042644696453249135,
+      "margin": 0.5305979565196152,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label10_sample9.mp4",
+      "label": 10,
+      "prediction": 10,
+      "distance": 0.04144147736108647,
+      "margin": 0.6562645656913216,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label15_sample4.mp4",
+      "label": 15,
+      "prediction": 15,
+      "distance": 0.046755576687599366,
+      "margin": 0.7090643633057796,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label15_sample8.mp4",
+      "label": 15,
+      "prediction": 15,
+      "distance": 0.05902916980089959,
+      "margin": 0.6682220262699062,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label6_sample1.mp4",
+      "label": 6,
+      "prediction": 6,
+      "distance": 0.04412620465488015,
+      "margin": 0.8193875884481289,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label6_sample2.mp4",
+      "label": 6,
+      "prediction": 6,
+      "distance": 0.04789665207343746,
+      "margin": 0.8377675387794824,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label6_sample3.mp4",
+      "label": 6,
+      "prediction": 6,
+      "distance": 0.02760064107954936,
+      "margin": 0.875834635687806,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label6_sample4.mp4",
+      "label": 6,
+      "prediction": 6,
+      "distance": 0.03735200115474324,
+      "margin": 0.8360256038205924,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label6_sample5.mp4",
+      "label": 6,
+      "prediction": 6,
+      "distance": 0.03537938945432431,
+      "margin": 0.8684263706266159,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label6_sample6.mp4",
+      "label": 6,
+      "prediction": 6,
+      "distance": 0.0375935822724553,
+      "margin": 0.8456472421247357,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label6_sample7.mp4",
+      "label": 6,
+      "prediction": 6,
+      "distance": 0.030214797057470155,
+      "margin": 0.8662338078984976,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label6_sample8.mp4",
+      "label": 6,
+      "prediction": 6,
+      "distance": 0.03959425888578836,
+      "margin": 0.8375768442094824,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label6_sample9.mp4",
+      "label": 6,
+      "prediction": 6,
+      "distance": 0.04494145745284326,
+      "margin": 0.7962348526914598,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label7_sample1.mp4",
+      "label": 7,
+      "prediction": 6,
+      "distance": 0.06626993438451861,
+      "margin": 0.5126599986762059,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label7_sample2.mp4",
+      "label": 7,
+      "prediction": 6,
+      "distance": 0.0647517352431141,
+      "margin": 0.6136104642314337,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label7_sample3.mp4",
+      "label": 7,
+      "prediction": 6,
+      "distance": 0.06947356634633346,
+      "margin": 0.460013377578632,
+      "accepted": true
+    },
+    {
+      "file": "signer4_label7_sample8.mp4",
+      "label": 7,
+      "prediction": 6,
+      "distance": 0.08218482860515082,
+      "margin": 0.4061417242666472,
+      "accepted": true
+    }
+  ],
+  "modelSha256": "5daacb3ee4c307bb2873d69248aab2fd1d402fd145738dbc74cf3b5f53a8895e"
+}

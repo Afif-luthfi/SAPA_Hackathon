@@ -156,7 +156,7 @@ export function CameraPanel({ onUsePhrases, onSample }: CameraPanelProps) {
           <button className="button primary full-camera-action" onClick={() => void camera.start()}><Camera size={18} />Aktifkan kamera</button>
         )}
       </div>
-      <div className="camera-privacy"><ShieldCheck size={18} /><p>Kamera aktif hanya setelah kamu mengizinkan. Gerakan diproses sementara di browser untuk contoh alur, tanpa direkam, disimpan, atau dikirim. Mikrofon tidak digunakan.</p></div>
+      <div className="camera-privacy"><ShieldCheck size={18} /><p>Kamera aktif hanya setelah kamu mengizinkan. Gerakan diproses sementara di browser untuk contoh alur, tanpa direkam, disimpan, atau dikirim. Mode kamera tidak memakai mikrofon; input suara petugas diaktifkan terpisah.</p></div>
       <div className="camera-scope"><span><Check size={15} />Contoh teknis alur isyarat</span><span>Bukan terjemahan BISINDO tervalidasi</span></div>
       <button className="camera-fallback" onClick={onUsePhrases}>Gunakan frasa<ArrowRight size={16} /></button>
     </section>
